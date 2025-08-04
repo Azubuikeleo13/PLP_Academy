@@ -1,5 +1,5 @@
 """A Basic Calculator Program
-- Reads two(2) numbers and and operator
+- Reads two(2) numbers and an operator
 - performs arithematic operation on the numbers using the operator
 - Output the result to the console.
 """
