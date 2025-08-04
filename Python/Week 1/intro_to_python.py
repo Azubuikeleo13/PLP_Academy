@@ -27,4 +27,4 @@ opertr = str(input("Enter the operator: "))
 
 res = calc(fNum, sNum, opertr)
 
-print("Result:", res)
+print(f"{fNum} {opertr} {sNum} = {res}")
