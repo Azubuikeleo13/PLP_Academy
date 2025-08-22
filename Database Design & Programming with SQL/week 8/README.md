@@ -33,6 +33,50 @@ A complete MySQL-based Clinic Booking System that allows managing patients, doct
 
 ## ERD Diagram
 
++---------------------+          +--------------------+
+|   Specializations   |          |     Medications    |
++---------------------+          +--------------------+
+| id (PK)             |          | id (PK)            |
+| name (UNIQUE)       |          | name               |
++---------------------+          | dosage             |
+                                 +--------------------+
+        ▲
+        | FK
+        |
++---------------------+          +----------------------+
+|      Doctors        |          |     Prescriptions     |
++---------------------+          +----------------------+
+| id (PK)             |          | id (PK)              |
+| first_name          |          | appointment_id (FK)  |
+| last_name           |          | notes                |
+| email (UNIQUE)      |          +----------------------+
+| specialization_id   |
++---------------------+                   ▲
+        ▲                                  |
+        |                                  |
+        |                                  |
++---------------------+           +------------------------+
+|    Appointments      |◄─────────| prescription_medications |
++---------------------+           +------------------------+
+| id (PK)             |           | prescription_id (PK/FK) |
+| doctor_id (FK)      |           | medication_id (PK/FK)   |
+| patient_id (FK)     |           +------------------------+
+| appointment_date    |
+| reason              |        
++---------------------+
+        ▲
+        |
++---------------------+
+|      Patients        |
++---------------------+
+| id (PK)             |
+| first_name          |
+| last_name           |
+| date_of_birth       |
+| phone (UNIQUE)      |
+| email (UNIQUE)      |
++---------------------+
+
 ## 📂 Contents
 
 - clinic_db_schema.sql — Contains all CREATE TABLE statements with constraints and relationships.
