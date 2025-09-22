@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Contact Nova Studio — tell us about your project and get a fast, friendly response." />
+    <title>Contact · Nova Studio</title>
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html"
+          ><img src="images/logo.svg" alt="" height="32" width="160" /><strong
+            >Nova Studio</strong
+          ></a
+        >
+        <nav aria-label="Primary" class="nav-links" id="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="work.html">Work</a>
+          <a href="contact.html" aria-current="page">Contact</a>
+        </nav>
+        <div style="display: flex; gap: 0.5rem">
+          <button class="theme-toggle" type="button" aria-label="Toggle theme">Theme</button>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+            Menu
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="container">
+      <section class="section grid-2">
+        <div class="reveal">
+          <h1>Let’s collaborate</h1>
+          <p class="muted">
+            We’d love to hear about your product, timeline, and goals. Share a brief overview below
+            and we’ll reply with a quick fit check, likely approach, and a transparent estimate.
+            We’re comfortable working as your full design-dev team, or alongside internal
+            stakeholders and other vendors.
+          </p>
+
+          <form name="contact" method="post" netlify data-validate="contact" novalidate>
+            <label for="name">Name</label>
+            <input id="name" name="name" class="input" autocomplete="name" required />
+            <div class="error" aria-live="polite" data-error-for="name"></div>
+
+            <label for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              class="input"
+              type="email"
+              autocomplete="email"
+              required />
+            <div class="error" aria-live="polite" data-error-for="email"></div>
+
+            <label for="message">Project details</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              required
+              placeholder="What are you building? Who is it for? What does success look like?"></textarea>
+            <div class="error" aria-live="polite" data-error-for="message"></div>
+
+            <label for="budget">Budget</label>
+            <select id="budget" name="budget" class="input">
+              <option value="">Select…</option>
+              <option>Under $2k</option>
+              <option>$2k–$5k</option>
+              <option>$5k–$10k</option>
+              <option>$10k+</option>
+            </select>
+            <p class="helper">We use your information only to respond to your inquiry.</p>
+
+            <button class="cta" type="submit">Send message</button>
+          </form>
+        </div>
+
+        <aside class="card reveal">
+          <h3>What happens next</h3>
+          <p class="muted">
+            We’ll review your note and reply with clarifying questions or a proposed approach. If
+            there’s a strong fit, we’ll schedule a short call to confirm scope and timeline.
+          </p>
+          <h3>Response times</h3>
+          <p class="muted">
+            Most messages receive a response within one business day. We work across time zones and
+            can be flexible for launch windows.
+          </p>
+          <h3>Other ways to reach us</h3>
+          <p class="muted">
+            Email <a href="mailto:hello@example.com">hello@example.com</a> or share a link to a
+            brief or RFP. We’re happy to sign an NDA when needed.
+          </p>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <img src="images/logo.svg" alt="" height="28" width="140" />
+          <p class="muted">We craft fast, accessible websites and delightful digital products.</p>
+        </div>
+        <div>
+          <strong>Pages</strong>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <strong>Meta</strong>
+          <ul>
+            <li><a href="#" target="_blank" rel="noopener">Blog</a></li>
+            <li><a href="mailto:hello@example.com">Email</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer" style="margin-top: 1rem">
+        <small>© <span id="year"></span> Nova Studio.</small>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

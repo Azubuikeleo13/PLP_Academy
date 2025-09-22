@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="About Nova Studio — small senior team, big outcomes." />
+    <title>About · Nova Studio</title>
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html"
+          ><img src="images/logo.svg" alt="" height="32" width="160" /><strong
+            >Nova Studio</strong
+          ></a
+        >
+        <nav aria-label="Primary" class="nav-links" id="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html" aria-current="page">About</a>
+          <a href="services.html">Services</a>
+          <a href="work.html">Work</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div style="display: flex; gap: 0.5rem">
+          <button class="theme-toggle" type="button" aria-label="Toggle theme">Theme</button>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+            Menu
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="container">
+      <section class="section grid-2">
+        <div class="reveal">
+          <h1>We’re a small team that cares about the craft</h1>
+          <p class="muted">
+            Nova Studio was founded on a simple belief: better websites come from tight
+            collaboration between designers and developers. We work in small, focused squads to keep
+            communication clear and momentum high. Our process is transparent, our feedback is
+            candid, and our standards are high—because your users expect nothing less.
+          </p>
+          <p class="muted">
+            We’ve shipped dozens of projects across B2B SaaS, e-commerce, education, and creator
+            brands. While the industries vary, our playbook stays consistent: understand the real
+            problem, design for clarity, and build with performance and accessibility in mind.
+          </p>
+          <ul>
+            <li>
+              <strong>Accessibility-first:</strong> semantic HTML, keyboard support, and inclusive
+              content.
+            </li>
+            <li><strong>Performance budgets:</strong> set limits early; ship fast experiences.</li>
+            <li><strong>Design systems:</strong> tokens and components for scalable UI.</li>
+            <li><strong>Async by default:</strong> clear docs and short, efficient calls.</li>
+          </ul>
+        </div>
+        <aside class="card reveal">
+          <h3>How we collaborate</h3>
+          <p class="muted">
+            You’ll get a single point of contact, weekly progress notes, and staged previews of your
+            site. We use structured feedback rounds so everyone stays aligned and decisions are
+            documented.
+          </p>
+          <h3>Toolbox</h3>
+          <ul>
+            <li>Figma for design and prototyping</li>
+            <li>GitHub for version control and issues</li>
+            <li>Vercel/Netlify for fast, reliable hosting</li>
+            <li>Analytics for honest, data-informed iteration</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="section">
+        <h2 class="reveal">Values that guide our work</h2>
+        <div class="cards">
+          <div class="card reveal">
+            <h3>Clarity</h3>
+            <p class="muted">
+              We avoid jargon and focus on what users need to know to act. Clear communication
+              reduces risk and speeds up delivery.
+            </p>
+          </div>
+          <div class="card reveal">
+            <h3>Craft</h3>
+            <p class="muted">
+              Details matter: micro-interactions, load order, focus states, and empty states.
+              They’re small on their own but huge when combined.
+            </p>
+          </div>
+          <div class="card reveal">
+            <h3>Care</h3>
+            <p class="muted">
+              We make choices that respect your users’ time, attention, and privacy. Long-term trust
+              beats short-term tricks every time.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <img src="images/logo.svg" alt="" height="28" width="140" />
+          <p class="muted">We craft fast, accessible websites and delightful digital products.</p>
+        </div>
+        <div>
+          <strong>Pages</strong>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <strong>Meta</strong>
+          <ul>
+            <li><a href="#" target="_blank" rel="noopener">Blog</a></li>
+            <li><a href="mailto:hello@example.com">Email</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer" style="margin-top: 1rem">
+        <small>© <span id="year"></span> Nova Studio.</small>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

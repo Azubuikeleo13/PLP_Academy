@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-labelledby="title desc">
+  <title id="title">Ecommerce Redesign</title>
+  <desc id="desc">Thumbnail depicting ecommerce: shopping bag, tag, and spark.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#7C3AED" stop-opacity=".04"/>
+    </linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0H0M0 20V0" fill="none" stroke="#64748B" stroke-opacity=".12"/>
+    </pattern>
+  </defs>
+  <!-- Card base -->
+  <rect x="8" y="8" width="304" height="184" rx="16" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <!-- Soft gradient tint -->
+  <rect x="8" y="8" width="304" height="184" rx="16" fill="url(#fade)"/>
+  <!-- Subtle grid -->
+  <rect x="8" y="8" width="304" height="184" rx="16" fill="url(#grid)" opacity=".5"/>
+  <!-- Decorative corner ribbon -->
+  <path d="M312 8 L260 8 L312 60 Z" fill="url(#g)" opacity=".35"/>
+  
+  <g transform="translate(60,40)">
+    <rect x="0" y="0" width="200" height="120" rx="12" fill="#fff" stroke="#E2E8F0"/>
+    <path d="M60 70 h80 a6 6 0 0 1 6 6 v28 a6 6 0 0 1 -6 6 h-80 a6 6 0 0 1 -6 -6 V76 a6 6 0 0 1 6 -6 z" fill="url(#g)" opacity=".12"/>
+    <!-- bag -->
+    <g transform="translate(84,54)">
+      <path d="M8 18 h36 a4 4 0 0 1 4 4 v28 a6 6 0 0 1 -6 6 H10 a6 6 0 0 1 -6 -6 V22 a4 4 0 0 1 4 -4 z" fill="none" stroke="url(#g)" stroke-width="2"/>
+      <path d="M16 22 c0 -8 24 -8 24 0" fill="none" stroke="#64748B" stroke-width="2"/>
+      <circle cx="16" cy="22" r="2" fill="#64748B"/><circle cx="40" cy="22" r="2" fill="#64748B"/>
+    </g>
+    <!-- price tag -->
+    <path d="M160 30 l18 18 -10 10 -18 -18 2 -8 8 -2z" fill="none" stroke="url(#g)" stroke-width="2"/>
+    <!-- spark -->
+    <path d="M130 38 l3 9 9 3 -9 3 -3 9 -3 -9 -9 -3 9 -3 3 -9z" fill="#7C3AED" opacity=".5"/>
+  </g>
+  <text x="24" y="172" font-family="system-ui, -apple-system, Segoe UI, Roboto" font-size="12" fill="#64748B">Ecommerce Redesign</text>
+
+</svg>

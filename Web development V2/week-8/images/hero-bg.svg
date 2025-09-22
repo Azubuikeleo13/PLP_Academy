@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- File: hero-bg.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid slice">
+  <title id="title">Nova Studio Hero Background</title>
+  <desc id="desc">Soft radial gradients with a subtle grid and diagonal accent lines.</desc>
+
+  <defs>
+    <!-- Grid pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0M0 40V0" fill="none" stroke="currentColor" stroke-opacity="0.08"/>
+    </pattern>
+
+    <!-- Radial glow -->
+    <radialGradient id="glow" cx="0.25" cy="0.3" r="0.8">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity="0.6"/>
+      <stop offset="0.5" stop-color="#7C3AED" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#0B1020" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Corner tint -->
+    <radialGradient id="corner" cx="1" cy="0" r="1">
+      <stop offset="0" stop-color="#7C3AED" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Accent gradient stroke -->
+    <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+
+    <!-- Respect reduced motion for the shimmer -->
+    <style>
+      @media (prefers-color-scheme: light) {
+        :root { color: #0b1020; }
+      }
+      @media (prefers-color-scheme: dark) {
+        :root { color: #ffffff; }
+      }
+      @media (prefers-reduced-motion: no-preference) {
+        .shimmer { animation: s 9s linear infinite; }
+        @keyframes s {
+          0%   { transform: translateX(-20%) translateY(-10%) rotate(0.001deg); opacity: .35; }
+          50%  { transform: translateX(10%)  translateY(0%)   rotate(0.001deg); opacity: .15; }
+          100% { transform: translateX(40%) translateY(10%)  rotate(0.001deg); opacity: .35; }
+        }
+      }
+    </style>
+  </defs>
+
+  <!-- Background base -->
+  <rect width="1600" height="900" fill="#0B1020"/>
+  <!-- Large soft glow -->
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <!-- Corner tint -->
+  <rect width="1600" height="900" fill="url(#corner)"/>
+
+  <!-- Subtle grid -->
+  <rect width="1600" height="900" fill="url(#grid)"/>
+
+  <!-- Accent diagonal strokes -->
+  <g opacity="0.45">
+    <path d="M-100 780 L400 -100" fill="none" stroke="url(#stroke)" stroke-width="2"/>
+    <path d="M200 980 L900 -120" fill="none" stroke="url(#stroke)" stroke-width="2" opacity="0.6"/>
+    <path d="M600 1020 L1400 -60" fill="none" stroke="url(#stroke)" stroke-width="2" opacity="0.35"/>
+  </g>
+
+  <!-- Floating star marks -->
+  <g fill="#fff" opacity="0.5">
+    <circle cx="260" cy="240" r="1.8"/>
+    <circle cx="380" cy="120" r="1.2"/>
+    <circle cx="1120" cy="300" r="1.5"/>
+    <circle cx="980" cy="160" r="1"/>
+    <circle cx="1340" cy="520" r="1.4"/>
+    <circle cx="480" cy="640" r="1.2"/>
+  </g>
+
+  <!-- Soft shimmering highlight -->
+  <g class="shimmer" style="transform-origin: 800px 450px;">
+    <ellipse cx="800" cy="450" rx="520" ry="240" fill="url(#stroke)" opacity="0.12"/>
+  </g>
+</svg>

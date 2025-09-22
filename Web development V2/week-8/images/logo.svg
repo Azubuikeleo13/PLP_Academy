@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- File: logo.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Nova Studio Logo</title>
+  <desc id="desc">A geometric eight-point star with a subtle blue-purple gradient.</desc>
+
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background circle (helps visibility on light/dark) -->
+  <circle cx="32" cy="32" r="30" fill="url(#g)" opacity="0.08"/>
+
+  <!-- Star -->
+  <g filter="url(#soft)">
+    <!-- Outer star -->
+    <path fill="url(#g)" d="M32 6l4.6 13.8L50 18l-10.2 8.6L43 40 32 32 21 40l3.2-13.4L14 18l13.4 1.8L32 6z"/>
+    <!-- Inner spark -->
+    <path fill="#fff" opacity="0.9" d="M32 24l2 6 6 2-6 2-2 6-2-6-6-2 6-2 2-6z"/>
+  </g>
+
+  <!-- Ring -->
+  <circle cx="32" cy="32" r="23.5" fill="none" stroke="url(#g)" stroke-width="1.5" opacity="0.6"/>
+</svg>

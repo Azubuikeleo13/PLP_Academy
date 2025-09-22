@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-labelledby="title desc">
+  <title id="title">SaaS Dashboard</title>
+  <desc id="desc">Thumbnail with dashboard widgets and a line chart.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#7C3AED" stop-opacity=".04"/>
+    </linearGradient>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0H0M0 20V0" fill="none" stroke="#64748B" stroke-opacity=".12"/>
+    </pattern>
+  </defs>
+  <!-- Card base -->
+  <rect x="8" y="8" width="304" height="184" rx="16" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <!-- Soft gradient tint -->
+  <rect x="8" y="8" width="304" height="184" rx="16" fill="url(#fade)"/>
+  <!-- Subtle grid -->
+  <rect x="8" y="8" width="304" height="184" rx="16" fill="url(#grid)" opacity=".5"/>
+  <!-- Decorative corner ribbon -->
+  <path d="M312 8 L260 8 L312 60 Z" fill="url(#g)" opacity=".35"/>
+  
+  <g transform="translate(50,40)">
+    <rect x="0" y="0" width="220" height="120" rx="10" fill="#fff" stroke="#E2E8F0"/>
+    <rect x="14" y="16" width="60" height="28" rx="6" fill="url(#g)" opacity=".15"/>
+    <rect x="86" y="16" width="50" height="28" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <rect x="150" y="16" width="56" height="28" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <!-- area chart -->
+    <path d="M20 100 L20 70 L60 80 L100 60 L140 66 L180 50 L180 100 Z" fill="url(#g)" opacity=".25"/>
+    <path d="M20 86 L60 78 L100 62 L140 66 L180 54" fill="none" stroke="url(#g)" stroke-width="2"/>
+  </g>
+  <text x="24" y="172" font-family="system-ui, -apple-system, Segoe UI, Roboto" font-size="12" fill="#64748B">SaaS Dashboard</text>
+
+</svg>

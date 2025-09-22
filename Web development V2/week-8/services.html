@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Services — strategy, design, and front-end development." />
+    <title>Services · Nova Studio</title>
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="index.html"
+          ><img src="images/logo.svg" alt="" height="32" width="160" /><strong
+            >Nova Studio</strong
+          ></a
+        >
+        <nav aria-label="Primary" class="nav-links" id="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html" aria-current="page">Services</a>
+          <a href="work.html">Work</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div style="display: flex; gap: 0.5rem">
+          <button class="theme-toggle" type="button" aria-label="Toggle theme">Theme</button>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+            Menu
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="container">
+      <section class="section">
+        <h1 class="reveal">What we do</h1>
+        <p class="muted reveal">
+          We blend product strategy, visual design, and front-end engineering to ship sites that are
+          fast, accessible, and easy to evolve. Each engagement starts with discovery and ends with
+          a documented, maintainable codebase.
+        </p>
+
+        <div class="cards">
+          <article class="card reveal">
+            <h3>Landing Page Sprint</h3>
+            <p class="muted">
+              In 1–2 weeks, we design and build a focused page that clarifies your value proposition
+              and drives sign-ups or sales. We provide copy guidance, brand-aligned visuals, and
+              proper analytics so you can test and learn quickly.
+            </p>
+            <p>
+              <strong>From $2,500</strong> · includes messaging workshop, responsive design, build,
+              and QA.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <h3>Product UI Kit</h3>
+            <p class="muted">
+              We create a compact design system—tokens, components, and documentation—that makes
+              interfaces consistent and quick to ship. Expect accessible components, thoughtful
+              defaults, and scalable patterns that your team can extend.
+            </p>
+            <p><strong>From $4,000</strong> · includes Figma assets and code references.</p>
+          </article>
+
+          <article class="card reveal">
+            <h3>Frontend Partner</h3>
+            <p class="muted">
+              For teams that need reliable design-dev support, we offer ongoing monthly
+              collaboration. We handle new pages, UI refinements, performance improvements, and A/B
+              test builds as your priorities evolve.
+            </p>
+            <p>
+              <strong>From $3,000/mo</strong> · flexible scope, weekly check-ins, clear backlog.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section grid-2">
+        <div class="card reveal">
+          <h3>FAQ</h3>
+          <details>
+            <summary>Do you work with frameworks?</summary>
+            <p>
+              Yes—React, Vue, Svelte, Astro, and classic semantic stacks. We default to the simplest
+              solution that meets the need.
+            </p>
+          </details>
+          <details>
+            <summary>Can you integrate a CMS?</summary>
+            <p>
+              Absolutely. We work with headless tools like Sanity and Contentful, or WordPress when
+              that’s the right fit.
+            </p>
+          </details>
+          <details>
+            <summary>What about SEO?</summary>
+            <p>
+              We implement technical best practices: metadata, structured data, sitemaps, and
+              excellent performance.
+            </p>
+          </details>
+          <details>
+            <summary>How do we start?</summary>
+            <p>
+              Send a short brief via the contact form. We’ll reply with a fit check, estimated
+              timeline, and next steps.
+            </p>
+          </details>
+        </div>
+
+        <div class="card reveal">
+          <h3>How we ensure quality</h3>
+          <ul>
+            <li>Semantic HTML and accessible components</li>
+            <li>Design tokens and reusable patterns</li>
+            <li>Performance budgets and continuous audits</li>
+            <li>Peer review, device testing, and clear documentation</li>
+          </ul>
+          <p class="muted">
+            You’ll receive preview links throughout the project and a short handover video at the
+            end covering code structure and updates.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <img src="images/logo.svg" alt="" height="28" width="140" />
+          <p class="muted">We craft fast, accessible websites and delightful digital products.</p>
+        </div>
+        <div>
+          <strong>Pages</strong>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <strong>Meta</strong>
+          <ul>
+            <li><a href="#" target="_blank" rel="noopener">Blog</a></li>
+            <li><a href="mailto:hello@example.com">Email</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container footer" style="margin-top: 1rem">
+        <small>© <span id="year"></span> Nova Studio.</small>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="js/main.js" defer></script>
+  </body>
+</html>
