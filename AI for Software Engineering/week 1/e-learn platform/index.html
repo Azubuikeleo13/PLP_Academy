@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>VibeCoding — Mini E-Learning</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <meta name="color-scheme" content="light dark" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand">
+        <span class="logo" aria-hidden="true">🎓</span>
+        <h1>VibeCoding Academy</h1>
+      </div>
+
+      <nav class="nav-actions" aria-label="User">
+        <button
+          id="searchToggle"
+          class="icon-btn"
+          aria-expanded="false"
+          aria-controls="searchBar"
+          title="Search courses">
+          🔎
+        </button>
+        <div id="searchBar" class="search hidden" role="search">
+          <label for="searchInput" class="sr-only">Search courses</label>
+          <input
+            id="searchInput"
+            type="search"
+            placeholder="Search courses, tags…"
+            autocomplete="off" />
+        </div>
+
+        <button id="themeToggle" class="icon-btn" title="Toggle theme" aria-pressed="false">
+          🌓
+        </button>
+        <button id="authBtn" class="btn">Login</button>
+      </nav>
+    </header>
+
+    <main id="app" tabindex="-1">
+      <!-- Routed views render here -->
+    </main>
+
+    <footer class="app-footer">
+      <small>© <span id="year"></span> VibeCoding. Built with ❤️ for Week 1.</small>
+    </footer>
+
+    <!-- Auth Modal -->
+    <dialog id="authModal" aria-labelledby="authTitle">
+      <form method="dialog" class="auth-card" id="authForm">
+        <h2 id="authTitle">Welcome back</h2>
+        <p class="muted">
+          Log in or create an account — no password, just your email for this demo.
+        </p>
+
+        <label
+          >Email
+          <input
+            id="authEmail"
+            type="email"
+            required
+            placeholder="you@example.com"
+            autocomplete="email" />
+        </label>
+        <label
+          >Display name
+          <input id="authName" type="text" required placeholder="Your name" autocomplete="name" />
+        </label>
+
+        <div class="row">
+          <button class="btn primary" value="login">Continue</button>
+          <button class="btn ghost" value="cancel">Cancel</button>
+        </div>
+      </form>
+    </dialog>
+
+    <template id="courseCardTpl">
+      <article class="course-card">
+        <header>
+          <div class="badge-list"></div>
+          <h3 class="title"></h3>
+          <p class="subtitle"></p>
+        </header>
+        <div class="meta">
+          <span class="chip lessons"></span>
+          <span class="chip level"></span>
+          <span class="chip est"></span>
+        </div>
+        <div class="progress">
+          <progress max="100" value="0" aria-label="Course completion"></progress>
+          <span class="progress-label">0% complete</span>
+        </div>
+        <footer>
+          <button class="btn primary view-btn">View</button>
+          <button class="btn ghost complete-btn">Mark as Completed</button>
+        </footer>
+      </article>
+    </template>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
