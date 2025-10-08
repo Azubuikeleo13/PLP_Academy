@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>SDG 11 • PM2.5 Predictor (Real Data)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>SDG 11: Sustainable Cities & Communities</h1>
+        <p>
+          Predict PM2.5 (µg/m³) from weather & wind features using a model trained on a real-world
+          dataset (UCI Beijing PM2.5 subset).
+        </p>
+      </header>
+
+      {% if error %}
+      <div class="alert">{{ error }}</div>
+      {% endif %}
+
+      <form action="{{ url_for('predict') }}" method="POST" class="card">
+        <h2>Enter Conditions</h2>
+
+        <div class="grid">
+          <label
+            >TEMP (°C)
+            <input name="TEMP" type="number" step="0.1" placeholder="e.g., 12.5" required />
+          </label>
+          <label
+            >DEWP (°C)
+            <input name="DEWP" type="number" step="0.1" placeholder="e.g., -2.0" required />
+          </label>
+          <label
+            >PRES (hPa)
+            <input name="PRES" type="number" step="0.1" placeholder="e.g., 1015.3" required />
+          </label>
+          <label
+            >Iws (wind index)
+            <input name="Iws" type="number" step="0.1" placeholder="e.g., 3.5" required />
+          </label>
+          <label
+            >Is (snow)
+            <input name="Is" type="number" step="1" placeholder="0 or small integer" required />
+          </label>
+          <label
+            >Ir (rain)
+            <input name="Ir" type="number" step="1" placeholder="0 or small integer" required />
+          </label>
+          <label
+            >Hour (0–23)
+            <input
+              name="hour"
+              type="number"
+              min="0"
+              max="23"
+              step="1"
+              placeholder="e.g., 14"
+              required />
+          </label>
+          <label
+            >Month (1–12)
+            <input
+              name="month"
+              type="number"
+              min="1"
+              max="12"
+              step="1"
+              placeholder="e.g., 11"
+              required />
+          </label>
+          <label
+            >Wind Direction (cbwd)
+            <select name="cbwd" required>
+              <option value="">-- select --</option>
+              <option value="N">N</option>
+              <option value="NE">NE</option>
+              <option value="E">E</option>
+              <option value="SE">SE</option>
+              <option value="S">S</option>
+              <option value="SW">SW</option>
+              <option value="W">W</option>
+              <option value="NW">NW</option>
+              <option value="cv">cv</option>
+            </select>
+          </label>
+        </div>
+
+        <button type="submit">Predict PM2.5</button>
+      </form>
+
+      <footer>
+        <p>
+          Model: Random Forest • Pipeline with scaling + one-hot encoding • For demonstration and
+          learning only.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

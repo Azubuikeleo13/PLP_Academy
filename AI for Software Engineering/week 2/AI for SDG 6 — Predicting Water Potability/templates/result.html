@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>PM2.5 Prediction Result</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Prediction Result</h1>
+        <p>SDG 11: Sustainable Cities & Communities</p>
+      </header>
+
+      <div class="card">
+        <h2>{{ prediction }} — <span class="badge">{{ category }}</span></h2>
+
+        <h3>Your Inputs</h3>
+        <div class="grid readonly">
+          {% for k, v in inputs.items() %}
+          <div class="pill"><strong>{{ k }}</strong><span>{{ v }}</span></div>
+          {% endfor %}
+        </div>
+
+        {% if tips and tips|length > 0 %}
+        <h3>Public Health Tips</h3>
+        <ul>
+          {% for t in tips %}
+          <li>{{ t }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+
+        <a href="{{ url_for('index') }}" class="link-btn">Try another scenario</a>
+      </div>
+
+      <footer>
+        <p>
+          Note: Uses a model trained on a real-world dataset subset. Do not use for critical health
+          decisions.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
